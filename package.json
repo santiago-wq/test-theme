@@ -13,12 +13,17 @@
   },
   "prettier": {},
   "dependencies": {
+    "@enzsft/react-cookie-consents": "^1.0.0",
     "@frontity/core": "^1.7.2",
     "@frontity/html2react": "^1.3.4",
     "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.2.1",
     "@frontity/wp-source": "^1.8.0",
+    "@palmabit/react-cookie-law": "^0.4.0",
     "frontity": "^1.10.0",
+    "localized-strings": "^0.2.4",
+    "react-cookie-consent": "^5.1.3",
+    "react-gdpr": "0.0.5",
     "react-localization": "^1.0.15",
     "test-theme": "file:packages/test-theme"
   }

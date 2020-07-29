@@ -1,7 +1,7 @@
 import Theme from "./pages";
 import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
-import {menuHandler} from "./utils/handlers"
+import {menuHandler , cookieList} from "./utils/handlers"
 import { fetch } from 'frontity';
 
 // export const fetchToken = async ({ state }) => {
@@ -59,10 +59,14 @@ const marsTheme = {
       },
       beforeSSR: ({ actions }) => async () => {
         await actions.source.fetch("menus/8");
+        await actions.source.fetch("cookielawinfo/");
+
       },
       beforeCSR: ({ actions }) => async () => {
         await actions.source.fetch("menus/8");
-      }
+        await actions.source.fetch("cookielawinfo/");
+
+      },
     },
   },
   libraries: {
@@ -75,7 +79,7 @@ const marsTheme = {
     },
     source: {
       // Add the custom handler for ACF options defined above.
-      handlers: [menuHandler]
+      handlers: [menuHandler, cookieList]
     }
   },
 };
